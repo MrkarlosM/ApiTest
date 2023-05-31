@@ -6,6 +6,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { EpisodesComponent } from './components/episodes/episodes.component';
 
 const routes: Routes = [
+  { path: '', component: CharactersComponent },
   { path: 'characters', component: CharactersComponent },
   { path: 'locations', component: LocationsComponent },
   { path: 'episodes', component: EpisodesComponent },
