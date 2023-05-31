@@ -1,0 +1,15 @@
+<div class="container text-center mt-4" style="width: 50%;">
+    <div class="row">
+      <div *ngFor="let char of listCharacters" class="col-4">
+        <div class="card mb-4" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Id: </strong>{{char.id}} - {{char.name}}</h5>
+              <p class="card-text"><strong>Air Date: </strong>{{char.air_date}}</p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="card flex justify-content-center">
+        <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="totalRecords" [rowsPerPageOptions]="[9, 18, 27]"></p-paginator>
+    </div>
+  </div>
