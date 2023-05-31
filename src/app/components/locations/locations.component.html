@@ -1,0 +1,20 @@
+<div class="container text-center mt-4" style="width: 50%;">
+    <div class="row">
+      <div *ngFor="let location of listLocations" class="col-4">
+        <div class="card mb-4" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Id: </strong>{{location.id}} - {{location.name}}</h5>
+              <p class="card-text"><strong>Type: </strong>{{location.type}}</p>
+              <ul class="list-group">
+                <li *ngFor="let resident of location.residents" class="list-group-item">
+                    <p>{{resident}}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="card flex justify-content-center">
+        <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="totalRecords" [rowsPerPageOptions]="[9, 18, 27]"></p-paginator>
+    </div>
+  </div>
